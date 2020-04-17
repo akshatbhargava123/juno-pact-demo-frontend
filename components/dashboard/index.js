@@ -7,9 +7,11 @@ const Dashboard = () => {
 			<Header />
 			<div className="flex justify-between page-content">
 				<div className="w-1/5 profile-menu-container">
+					<ProfileMenu />
+				</div>
+				<div className="w-3/5">
 					<h1>Person related dispute menu here</h1>
 				</div>
-				<div className="w-3/5"><ProfileMenu /></div>
 				<div className="w-1/5 dispute-menu-container">
 					<h1>Project related menu will come here</h1>
 				</div>
