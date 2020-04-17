@@ -1,8 +1,10 @@
 import Head from 'next/head';
+import { ThemeProvider, CSSReset } from '@chakra-ui/core';
 
 const Page = ({ title, children }) => {
 	return (
-		<div>
+		<ThemeProvider>
+			<CSSReset />
 			<Head>
 				<title>{title} - JunoPact</title>
 				<link rel="icon" href="/favicon.ico" />
@@ -21,7 +23,7 @@ const Page = ({ title, children }) => {
 			<div>
 				{children()}
 			</div>
-		</div>
+		</ThemeProvider>
 	);
 };
 
