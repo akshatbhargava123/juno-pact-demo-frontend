@@ -1,5 +1,5 @@
 import { Avatar, useDisclosure } from '@chakra-ui/core';
-import { Plus, ChevronRight, ChevronDown } from 'react-feather';
+import { ChevronRight, ChevronDown, Search } from 'react-feather';
 
 const DisputeSection = ({ title, disputes, selectedDispute }) => {
 	const { isOpen, onToggle } = useDisclosure(true);
@@ -55,6 +55,13 @@ const ProfileMenu = () => {
 				</div>
 			</div>
 			<div className="bg-gray-500 h-full w-full">
+				<div className="bg-gray-200 w-full flex items-center">
+					<Search className="ml-2 m-0 text-gray-600" />
+					<input
+						placeholder="Search by Plaintiff / Defendant"
+						className="bg-gray-200 w-full outline-none h-12 px-3 py-2 text-lg"
+					/>
+				</div>
 				<DisputeSection
 					title="outgoing disputes"
 					disputes={[
