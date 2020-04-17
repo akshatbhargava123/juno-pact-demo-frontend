@@ -16,12 +16,15 @@ const DisputeSection = ({ title, disputes, selectedDispute }) => {
 						{isOpen ? <ChevronDown /> : <ChevronRight />}
 					</div>
 				</h3>
-				<div className={`transition-duration-200 overflow-y-scroll ${isOpen ? 'h-40' : 'h-0'}`}>
+				<div
+					className={`transition-duration-200 overflow-y-scroll`}
+					style={{ height: isOpen ? '9rem' : 0 }}
+				>
 					{disputes.map(dispute => (
 						<p
 							key={dispute.name}
 							className={`
-								px-6 py-3 transition-duration-200 cursor-pointer font-semibold rounded-l h-12
+								px-6 py-3 transition-duration-200 cursor-pointer font-semibold rounded-l
 								${selectedDispute.name === dispute.name ? 'text-gold-400 bg-white font-bold italic' : 'text-gray-200'}
 								${selectedDispute.name !== dispute.name && 'bg-gray-600 hover:bg-white hover:text-gray-700 hover:opacity-75'}
 							`}
