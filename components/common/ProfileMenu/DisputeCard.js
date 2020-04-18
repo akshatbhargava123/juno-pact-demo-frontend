@@ -1,38 +1,15 @@
-
-import { useDisclosure } from '@chakra-ui/core';
-import { ChevronRight, ChevronDown } from 'react-feather';
-
-const DisputeCard = ({ title, disputes, selectedDispute, defaultContentIsOpen = true }) => {
-	const { isOpen, onToggle } = useDisclosure(defaultContentIsOpen);
-	// FIXME: fix the height issue, overflow-scroll needs a fixed height
+const DisputeCard = ({ plaintiff, defendant, category, lastUpdate }) => {
 	return (
-		<div>
-			<div>
-				<h3
-					onClick={onToggle}
-					className="cursor-pointer capitalize px-6 py-3 font-bold bg-white text-gray-700 text-lg flex items-center justify-between"
-				>
-					{title}
-					<div>
-						{isOpen ? <ChevronDown /> : <ChevronRight />}
-					</div>
-				</h3>
-				<div
-					className={`transition-duration-200 overflow-y-scroll`}
-					style={{ height: isOpen ? '9rem' : 0 }}
-				>
-					{disputes.map(dispute => (
-						<p
-							key={dispute.name}
-							className={`
-								px-6 py-3 transition-duration-200 cursor-pointer font-semibold rounded-l
-								${selectedDispute.name === dispute.name ? 'text-gold-400 bg-white font-bold italic' : 'text-gray-200'}
-								${selectedDispute.name !== dispute.name && 'bg-gray-600 hover:bg-white hover:text-gray-700 hover:opacity-75'}
-							`}
-						>
-							{dispute.name}
-						</p>
-					))}
+		<div className="shadow rounded bg-gray-200 my-4 cursor-pointer">
+			<div className="transition-duration-200 overflow-y-scroll px-6 py-3">
+				<p className="font-semibold">{`${plaintiff.name} VS ${defendant.name}`}</p>
+				<div className="font-light flex justify-between">
+					<p>{category}</p>
+					<p><span className="text-green-700 font-bold">5</span> / 24 days</p>
+				</div>
+				<div className="flex text-sm mt-1">
+					<p className="font-semibold mr-2">Last Update: </p>
+					<p>{lastUpdate}</p>
 				</div>
 			</div>
 		</div>

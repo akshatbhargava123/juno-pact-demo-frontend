@@ -8,16 +8,30 @@ const ProfileMenu = () => {
 			<div className="w-full my-2 px-3">
 				<DisputeSearch />
 			</div>
-			<div>
+			<div className="w-full px-3">
 				<DisputeCard
-					title="settled disputes"
-					disputes={[
-						{ name: 'Shubham VS Yes Bank' },
-						{ name: 'Shubham VS Zoom' },
-						{ name: 'Shubham VS Akshat' },
-					]}
-					selectedDispute={{ name: 'Shubham VS Zoom2' }}
-					defaultContentIsOpen={false}
+					plaintiff={{ name: 'Shubham' }}
+					defendant={{ name: 'Yes Bank' }}
+					category="Child Custody"
+					lastUpdate="Next Hearing on 14th April, 2020"
+				/>
+				<DisputeCard
+					plaintiff={{ name: 'Akshat' }}
+					defendant={{ name: 'Shubham' }}
+					category="Child Custody"
+					lastUpdate="Next Hearing on 14th April, 2020"
+				/>
+				<DisputeCard
+					plaintiff={{ name: 'Shubham' }}
+					defendant={{ name: 'Yes Bank' }}
+					category="Child Custody"
+					lastUpdate="Next Hearing on 14th April, 2020"
+				/>
+				<DisputeCard
+					plaintiff={{ name: 'Shubham' }}
+					defendant={{ name: 'Yes Bank' }}
+					category="Child Custody"
+					lastUpdate="Next Hearing on 14th April, 2020"
 				/>
 			</div>
 			<ExploreDisputeTabs />
