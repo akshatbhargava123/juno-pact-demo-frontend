@@ -1,5 +1,5 @@
 import { Progress } from '@chakra-ui/core';
-import { Edit, BookOpen, Archive, Database, Briefcase, Loader, Clock, Key, Folder, Info, Zap, Circle } from 'react-feather';
+import { Edit, BookOpen, Archive, Database, Briefcase, Loader, Clock, Key, Folder, Info, Zap, Circle, Calendar } from 'react-feather';
 
 const MenuItem = ({ label, Icon }) => (
 	<div className="flex items-center p-2 cursor-pointer hover:bg-gray-300">
@@ -35,7 +35,7 @@ const DisputeDetailMenu = () => {
 				<MenuItem label="Orders" Icon={Loader} />
 				<MenuItem label="Timeline" Icon={Clock} />
 				<MenuItem label="Instructions" Icon={Key} />
-				<MenuItem label="Resolution Calendar" Icon={Key} />
+				<MenuItem label="Resolution Calendar" Icon={Calendar} />
 				<MenuItem label="Final Orders/Awards" Icon={BookOpen} />
 				<MenuItem label="Recorded Meetings" Icon={Folder} />
 			</div>
