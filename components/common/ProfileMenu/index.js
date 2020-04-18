@@ -1,102 +1,26 @@
-import { Avatar, useDisclosure } from '@chakra-ui/core';
-import { ChevronRight, ChevronDown, Search } from 'react-feather';
-
-const DisputeSection = ({ title, disputes, selectedDispute, defaultContentIsOpen = true }) => {
-	const { isOpen, onToggle } = useDisclosure(defaultContentIsOpen);
-	// FIXME: fix the height issue, overflow-scroll needs a fixed height
-	return (
-		<div>
-			<div>
-				<h3
-					onClick={onToggle}
-					className="cursor-pointer capitalize px-6 py-3 font-bold bg-white text-gray-700 text-lg flex items-center justify-between"
-				>
-					{title}
-					<div>
-						{isOpen ? <ChevronDown /> : <ChevronRight />}
-					</div>
-				</h3>
-				<div
-					className={`transition-duration-200 overflow-y-scroll`}
-					style={{ height: isOpen ? '9rem' : 0 }}
-				>
-					{disputes.map(dispute => (
-						<p
-							key={dispute.name}
-							className={`
-								px-6 py-3 transition-duration-200 cursor-pointer font-semibold rounded-l
-								${selectedDispute.name === dispute.name ? 'text-gold-400 bg-white font-bold italic' : 'text-gray-200'}
-								${selectedDispute.name !== dispute.name && 'bg-gray-600 hover:bg-white hover:text-gray-700 hover:opacity-75'}
-							`}
-						>
-							{dispute.name}
-						</p>
-					))}
-				</div>
-			</div>
-		</div>
-	);
-};
-
-// <DisputeSection
-// 	title="outgoing disputes"
-// 	disputes={[
-// 		{ name: 'Shubham VS Yes Bank' },
-// 		{ name: 'Shubham VS Zoom' },
-// 		{ name: 'Shubham VS Akshat' },
-// 	]}
-// 	selectedDispute={{ name: 'Shubham VS Zoom' }}
-// />
-// <DisputeSection
-// 	title="pending disputes"
-// 	disputes={[
-// 		{ name: 'Shubham VS Yes Bank' },
-// 		{ name: 'Shubham VS Zoom' },
-// 		{ name: 'Shubham VS Akshat' },
-// 		{ name: 'Shubham VS Zoom2' },
-// 		{ name: 'Shubham VS Akshat2' },
-// 	]}
-// 	selectedDispute={{ name: 'Shubham VS Zoom2' }}
-// />
-// <DisputeSection
-// 	title="settled disputes"
-// 	disputes={[
-// 		{ name: 'Shubham VS Yes Bank' },
-// 		{ name: 'Shubham VS Zoom' },
-// 		{ name: 'Shubham VS Akshat' },
-// 	]}
-// 	selectedDispute={{ name: 'Shubham VS Zoom2' }}
-// 	defaultContentIsOpen={false}
-// />
-
-const DisputeTabOptions = {
-	ONGOING: 'Ongoing',
-	PENDING: 'Pending',
-	SETTLED: 'Settled',
-};
-
-const DisputeTabs = () => {
-	const Tab = ({ children }) => <div className="w-1/3 hover:bg-gray-200 h-full capitalise cursor-pointer border-r flex-center">{children}</div>;
-	return (
-		<div className="absolute w-full bottom-0 h-12 flex-center border-t">
-			{Object.keys(DisputeTabOptions).map(tabKey => <Tab key={tabKey}>{DisputeTabOptions[tabKey]}</Tab>)}
-		</div>
-	);
-};
+import { ExploreDisputeTabs } from './ExploreDisputeTabs';
+import { DisputeSearch } from './DisputeSearch';
+import { DisputeCard } from './DisputeCard';
 
 const ProfileMenu = () => {
 	return (
 		<div className="relative flex flex-col items-center h-full w-full bg-white shadow">
 			<div className="w-full my-2 px-3">
-				<div className="flex items-center border-b-2 border-blue-500">
-					<Search className="ml-2 m-0 text-gray-600" />
-					<input
-						placeholder="Search by Plaintiff / Defendant"
-						className="w-full outline-none h-10 px-3 py-2 text-lg"
-					/>
-				</div>
+				<DisputeSearch />
 			</div>
-			<DisputeTabs />
+			<div>
+				<DisputeCard
+					title="settled disputes"
+					disputes={[
+						{ name: 'Shubham VS Yes Bank' },
+						{ name: 'Shubham VS Zoom' },
+						{ name: 'Shubham VS Akshat' },
+					]}
+					selectedDispute={{ name: 'Shubham VS Zoom2' }}
+					defaultContentIsOpen={false}
+				/>
+			</div>
+			<ExploreDisputeTabs />
 		</div>
 	);
 };
