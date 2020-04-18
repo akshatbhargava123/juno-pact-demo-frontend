@@ -1,8 +1,11 @@
-import { ExploreDisputeTabs } from './ExploreDisputeTabs';
+import { useState } from 'react';
+import { ExploreDisputeTabs, ExploreDisputeTabOptions } from './ExploreDisputeTabs';
 import { DisputeSearch } from './DisputeSearch';
 import { DisputeCard } from './DisputeCard';
 
 const ProfileMenu = () => {
+	const [selectedTab, setSelectedTab] = useState(ExploreDisputeTabOptions.ONGOING);
+
 	return (
 		<div className="relative flex flex-col items-center h-full w-full bg-white shadow">
 			<div className="w-full my-2 px-3">
@@ -34,7 +37,10 @@ const ProfileMenu = () => {
 					lastUpdate="Next Hearing on 14th April, 2020"
 				/>
 			</div>
-			<ExploreDisputeTabs />
+			<ExploreDisputeTabs
+				selectedTab={selectedTab}
+				onTabChange={setSelectedTab}
+			/>
 		</div>
 	);
 };
