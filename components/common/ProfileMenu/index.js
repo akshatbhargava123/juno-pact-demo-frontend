@@ -9,7 +9,7 @@ const DisputeSection = ({ title, disputes, selectedDispute, defaultContentIsOpen
 			<div>
 				<h3
 					onClick={onToggle}
-					className="cursor-pointer capitalize px-6 py-3 font-bold bg-gray-800 text-white text-lg flex items-center justify-between"
+					className="cursor-pointer capitalize px-6 py-3 font-bold bg-white text-gray-700 text-lg flex items-center justify-between"
 				>
 					{title}
 					<div>
@@ -40,17 +40,7 @@ const DisputeSection = ({ title, disputes, selectedDispute, defaultContentIsOpen
 
 const ProfileMenu = () => {
 	return (
-		<div className="flex flex-col items-center h-full w-full bg-gray-500">
-			<div className="w-full h-32 bg-gray-500 text-white px-8 py-4 flex flex-col justify-around items-top">
-				<div className="flex items-center">
-					<Avatar
-						src="https://www.biography.com/.image/t_share/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg"
-						name="Elon Musk"
-						size="lg"
-					/>
-					<span className="text-white text-2xl ml-4 font-semibold">Elon Musk</span>
-				</div>
-			</div>
+		<div className="flex flex-col items-center h-full w-full bg-white">
 			<div className="bg-gray-500 h-full w-full mt-3">
 				<div className="bg-gray-200 w-full flex items-center">
 					<Search className="ml-2 m-0 text-gray-600" />
