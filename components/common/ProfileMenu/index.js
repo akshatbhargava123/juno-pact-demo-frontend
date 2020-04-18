@@ -38,48 +38,65 @@ const DisputeSection = ({ title, disputes, selectedDispute, defaultContentIsOpen
 	);
 };
 
+// <DisputeSection
+// 	title="outgoing disputes"
+// 	disputes={[
+// 		{ name: 'Shubham VS Yes Bank' },
+// 		{ name: 'Shubham VS Zoom' },
+// 		{ name: 'Shubham VS Akshat' },
+// 	]}
+// 	selectedDispute={{ name: 'Shubham VS Zoom' }}
+// />
+// <DisputeSection
+// 	title="pending disputes"
+// 	disputes={[
+// 		{ name: 'Shubham VS Yes Bank' },
+// 		{ name: 'Shubham VS Zoom' },
+// 		{ name: 'Shubham VS Akshat' },
+// 		{ name: 'Shubham VS Zoom2' },
+// 		{ name: 'Shubham VS Akshat2' },
+// 	]}
+// 	selectedDispute={{ name: 'Shubham VS Zoom2' }}
+// />
+// <DisputeSection
+// 	title="settled disputes"
+// 	disputes={[
+// 		{ name: 'Shubham VS Yes Bank' },
+// 		{ name: 'Shubham VS Zoom' },
+// 		{ name: 'Shubham VS Akshat' },
+// 	]}
+// 	selectedDispute={{ name: 'Shubham VS Zoom2' }}
+// 	defaultContentIsOpen={false}
+// />
+
+const DisputeTabOptions = {
+	ONGOING: 'Ongoing',
+	PENDING: 'Pending',
+	SETTLED: 'Settled',
+};
+
+const DisputeTabs = () => {
+	const Tab = ({ children }) => <div className="w-1/3 hover:bg-gray-200 h-full capitalise cursor-pointer border-r flex-center">{children}</div>;
+	return (
+		<div className="absolute w-full bottom-0 h-12 flex-center border-t">
+			{Object.keys(DisputeTabOptions).map(tabKey => <Tab key={tabKey}>{DisputeTabOptions[tabKey]}</Tab>)}
+		</div>
+	);
+};
+
 const ProfileMenu = () => {
 	return (
-		<div className="flex flex-col items-center h-full w-full bg-white">
-			<div className="bg-gray-500 h-full w-full mt-3">
-				<div className="bg-gray-200 w-full flex items-center">
+		<div className="relative flex flex-col items-center h-full w-full bg-white shadow">
+			<div className="w-full my-2 px-3">
+				<div className="flex items-center border-b-2 border-blue-500">
 					<Search className="ml-2 m-0 text-gray-600" />
 					<input
 						placeholder="Search by Plaintiff / Defendant"
-						className="bg-gray-200 w-full outline-none h-12 px-3 py-2 text-lg"
+						className="w-full outline-none h-10 px-3 py-2 text-lg"
 					/>
 				</div>
-				<DisputeSection
-					title="outgoing disputes"
-					disputes={[
-						{ name: 'Shubham VS Yes Bank' },
-						{ name: 'Shubham VS Zoom' },
-						{ name: 'Shubham VS Akshat' },
-					]}
-					selectedDispute={{ name: 'Shubham VS Zoom' }}
-				/>
-				<DisputeSection
-					title="pending disputes"
-					disputes={[
-						{ name: 'Shubham VS Yes Bank' },
-						{ name: 'Shubham VS Zoom' },
-						{ name: 'Shubham VS Akshat' },
-						{ name: 'Shubham VS Zoom2' },
-						{ name: 'Shubham VS Akshat2' },
-					]}
-					selectedDispute={{ name: 'Shubham VS Zoom2' }}
-				/>
-				<DisputeSection
-					title="settled disputes"
-					disputes={[
-						{ name: 'Shubham VS Yes Bank' },
-						{ name: 'Shubham VS Zoom' },
-						{ name: 'Shubham VS Akshat' },
-					]}
-					selectedDispute={{ name: 'Shubham VS Zoom2' }}
-					defaultContentIsOpen={false}
-				/>
 			</div>
+			<DisputeTabs />
 		</div>
 	);
 };
