@@ -1,5 +1,6 @@
 import Header from "@components/common/header";
 import ProfileMenu from "@components/common/ProfileMenu";
+import DisputeDetailMenu from "@components/common/DisputeDetailMenu";
 
 const Dashboard = () => {
 	return (
@@ -13,7 +14,7 @@ const Dashboard = () => {
 					<h1>Person related dispute menu here</h1>
 				</div>
 				<div className="w-1/5 dispute-menu-container">
-					<h1>Project related menu will come here</h1>
+					<DisputeDetailMenu />
 				</div>
 			</div>
 			<style jsx>{`
@@ -24,7 +25,7 @@ const Dashboard = () => {
 					min-width: 18rem;
 				}
 				.dispute-menu-container {
-					min-width: 18rem;
+					min-width: 20rem;
 				}
 			`}</style>
 		</div>

@@ -40,8 +40,8 @@ const DisputeSection = ({ title, disputes, selectedDispute, defaultContentIsOpen
 
 const ProfileMenu = () => {
 	return (
-		<div className="flex flex-col items-center h-full w-full bg-black">
-			<div className="w-full h-32 bg-black text-white px-8 py-4 flex flex-col justify-around items-top">
+		<div className="flex flex-col items-center h-full w-full bg-gray-500">
+			<div className="w-full h-32 bg-gray-500 text-white px-8 py-4 flex flex-col justify-around items-top">
 				<div className="flex items-center">
 					<Avatar
 						src="https://www.biography.com/.image/t_share/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg"
@@ -74,7 +74,7 @@ const ProfileMenu = () => {
 						{ name: 'Shubham VS Yes Bank' },
 						{ name: 'Shubham VS Zoom' },
 						{ name: 'Shubham VS Akshat' },
-						{ name: 'Shubham VS Zoom' },
+						{ name: 'Shubham VS Zoom2' },
 						{ name: 'Shubham VS Akshat2' },
 					]}
 					selectedDispute={{ name: 'Shubham VS Zoom2' }}
