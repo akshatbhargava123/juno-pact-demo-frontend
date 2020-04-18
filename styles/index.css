@@ -7,3 +7,9 @@
 	@apply transition;
 	@apply duration-200;
 }
+
+.flex-center {
+	@apply flex;
+	@apply items-center;
+	@apply justify-center;
+}
