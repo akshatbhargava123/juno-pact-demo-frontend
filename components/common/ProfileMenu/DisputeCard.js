@@ -1,6 +1,6 @@
 const DisputeCard = ({ plaintiff, defendant, category, lastUpdate }) => {
 	return (
-		<div className="shadow rounded bg-gray-200 my-4 cursor-pointer">
+		<div className="rounded border-b border-gray-300 my-4 cursor-pointer hover:shadow transition-duration-200">
 			<div className="transition-duration-200 overflow-y-scroll px-6 py-3">
 				<p className="font-semibold">{`${plaintiff.name} VS ${defendant.name}`}</p>
 				<div className="font-light flex justify-between">
