@@ -33,7 +33,7 @@ const ExploreDisputeSidebar = () => {
 	const [selectedTab, setSelectedTab] = useState(ExploreDisputeTabOptions.ONGOING);
 	const [disputeMap, setDisputeMap] = useState(DisputeMapMockData);
 	return (
-		<div className="relative flex flex-col items-center h-full w-full bg-white shadow">
+		<div className="relative flex flex-col items-center z-50 h-full w-full bg-white shadow">
 			<div className="w-full my-2 px-3">
 				<DisputeSearch />
 			</div>
