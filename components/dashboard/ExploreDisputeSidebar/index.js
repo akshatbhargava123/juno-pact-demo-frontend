@@ -11,7 +11,7 @@ const ExploreDisputeSidebar = () => {
 			<div className="w-full my-2 px-3">
 				<DisputeSearch />
 			</div>
-			<div className="w-full px-3">
+			<div className="w-full px-3 overflow-y-scroll mb-12">
 				<DisputeCard
 					plaintiff={{ name: 'Shubham' }}
 					defendant={{ name: 'Yes Bank' }}
@@ -36,6 +36,30 @@ const ExploreDisputeSidebar = () => {
 					category="Child Custody"
 					lastUpdate="Next Hearing on 14th April, 2020"
 				/>
+				<DisputeCard
+				plaintiff={{ name: 'Shubham' }}
+				defendant={{ name: 'Yes Bank' }}
+				category="Child Custody"
+				lastUpdate="Next Hearing on 14th April, 2020"
+			/>
+			<DisputeCard
+				plaintiff={{ name: 'Shubham' }}
+				defendant={{ name: 'Yes Bank' }}
+				category="Child Custody"
+				lastUpdate="Next Hearing on 14th April, 2020"
+			/>
+			<DisputeCard
+			plaintiff={{ name: 'Shubham' }}
+			defendant={{ name: 'Yes Bank' }}
+			category="Child Custody"
+			lastUpdate="Next Hearing on 14th April, 2020"
+		/>
+		<DisputeCard
+			plaintiff={{ name: 'Shubham' }}
+			defendant={{ name: 'Yes Bank' }}
+			category="Child Custody"
+			lastUpdate="Next Hearing on 14th April, 2020"
+		/>
 			</div>
 			<ExploreDisputeTabs
 				selectedTab={selectedTab}
