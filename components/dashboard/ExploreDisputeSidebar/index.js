@@ -38,20 +38,25 @@ const ExploreDisputeSidebar = () => {
 			<div className="w-full my-2 px-3">
 				<DisputeSearch />
 			</div>
-			<div className="w-full px-3 overflow-y-scroll mb-12">
-				{get(disputeMap, selectedTab, []).map(dispute => (
-					<DisputeCard
-						key={dispute.id}
-						plaintiff={dispute.plaintiff}
-						defendant={dispute.defendant}
-						category={dispute.category}
-						lastUpdate={dispute.lastUpdate}
-					/>
-				))}
-				{!disputeMap[selectedTab] && (
-					<h1>No data</h1>
-				)}
-			</div>
+			{disputeMap[selectedTab] && (
+				<div className="w-full px-3 overflow-y-scroll mb-12">
+					{disputeMap[selectedTab].map(dispute => (
+						<DisputeCard
+							key={dispute.id}
+							plaintiff={dispute.plaintiff}
+							defendant={dispute.defendant}
+							category={dispute.category}
+							lastUpdate={dispute.lastUpdate}
+						/>
+					))}
+				</div>
+			)}
+			{!disputeMap[selectedTab] && (
+				<div className="flex-center flex-col h-full">
+					<img src="images/no-data.svg" className="w-48" />
+					<span className="font-thin text-xl">No {selectedTab} Disputes</span>
+				</div>
+			)}
 			<ExploreDisputeTabs
 				selectedTab={selectedTab}
 				onTabChange={setSelectedTab}
