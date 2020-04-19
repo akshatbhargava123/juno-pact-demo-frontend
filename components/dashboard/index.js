@@ -1,4 +1,5 @@
 import Header from "@components/common/header";
+import DisputeContent from "@components/dashboard/DisputeContent";
 import DisputeDetailMenu from "@components/dashboard/DisputeDetailMenu";
 import ExploreDisputeSidebar from "@components/dashboard/ExploreDisputeSidebar";
 
@@ -11,20 +12,7 @@ const Dashboard = () => {
 					<ExploreDisputeSidebar />
 				</div>
 				<div className="w-full mx-10 my-5">
-					<div className="flex justify-between">
-						<div className="w-full py-3 cursor-pointer bg-gray-100 rounded-t-lg text-center hover:bg-gray-300">
-							My Mails
-						</div>
-						<div className="w-full py-3 cursor-pointer bg-gray-100 rounded-t-lg text-center hover:bg-gray-300">
-							Filings
-						</div>
-						<div className="w-full py-3 cursor-pointer bg-gray-100 rounded-t-lg text-center hover:bg-gray-300">
-							Correspondence
-						</div>
-						<div className="w-full py-3 cursor-pointer bg-gray-100 rounded-t-lg text-center hover:bg-gray-300">
-							Notes
-						</div>
-					</div>
+					<DisputeContent />
 				</div>
 				<div className="dispute-menu-container">
 					<DisputeDetailMenu />
