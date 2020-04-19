@@ -1,9 +1,14 @@
-import { DisputeTabs } from './DisputeTabs';
+import { useState } from 'react';
+import { DisputeTabs, DisputeTabsOptions } from './DisputeTabs';
 
 const DisputeContent = () => {
+	const [selectedTab, setSelectedTab] = useState(DisputeTabsOptions.MY_MAILS);
 	return (
 		<div>
-			<DisputeTabs />
+			<DisputeTabs
+				selectedTab={selectedTab}
+				onTabChange={setSelectedTab}
+			/>
 		</div>
 	);
 };
