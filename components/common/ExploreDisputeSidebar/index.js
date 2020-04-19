@@ -3,7 +3,7 @@ import { ExploreDisputeTabs, ExploreDisputeTabOptions } from './ExploreDisputeTa
 import { DisputeSearch } from './DisputeSearch';
 import { DisputeCard } from './DisputeCard';
 
-const ProfileMenu = () => {
+const ExploreDisputeSidebar = () => {
 	const [selectedTab, setSelectedTab] = useState(ExploreDisputeTabOptions.ONGOING);
 
 	return (
@@ -45,4 +45,4 @@ const ProfileMenu = () => {
 	);
 };
 
-export default ProfileMenu;
+export default ExploreDisputeSidebar;

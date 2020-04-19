@@ -1,14 +1,14 @@
 import Header from "@components/common/header";
-import ProfileMenu from "@components/common/ProfileMenu";
 import DisputeDetailMenu from "@components/common/DisputeDetailMenu";
+import ExploreDisputeSidebar from "@components/common/ExploreDisputeSidebar";
 
 const Dashboard = () => {
 	return (
 		<div>
 			<Header />
 			<div className="flex justify-between page-content">
-				<div className="absolute left-0 profile-menu-container">
-					<ProfileMenu />
+				<div className="absolute left-0 explore-disputes-sidebar-container">
+					<ExploreDisputeSidebar />
 				</div>
 				<div className="w-3/5">
 					<h1>Person related dispute menu here</h1>
@@ -21,7 +21,7 @@ const Dashboard = () => {
 				.page-content {
 					height: calc(100vh - 4rem);	
 				}
-				.profile-menu-container {
+				.explore-disputes-sidebar-container {
 					min-width: 26rem;
 					height: calc(100vh - 4rem);
 				}
