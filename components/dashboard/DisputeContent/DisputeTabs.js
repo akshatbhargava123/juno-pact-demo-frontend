@@ -17,8 +17,8 @@ const DisputeTabsIcons = {
 const DisputeTab = ({ label, selected, onTabClick, Icon }) => (
 	<div
 		className={`
-			w-full py-3 px-5 cursor-pointer text-white hover:bg-gray-700 flex justify-between
-			${selected ? 'bg-gray-700' : 'bg-gray-800 text-white'}
+			w-full py-3 px-5 cursor-pointer text-white hover:bg-gray-700 hover:font-bold flex justify-between
+			${selected ? 'bg-gray-700 font-semibold' : 'bg-gray-900 text-white'}
 		`}
 		onClick={onTabClick}
 	>

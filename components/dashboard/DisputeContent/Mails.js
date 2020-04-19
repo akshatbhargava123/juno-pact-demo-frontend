@@ -32,6 +32,7 @@ const Mails = () => {
 	return (
 		<div>
 			<Mail />
+			<Mail />
 			<Mail read />
 			<Mail read />
 			<Mail read />
