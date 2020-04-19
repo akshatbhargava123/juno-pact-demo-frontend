@@ -10,10 +10,23 @@ const Dashboard = () => {
 				<div className="absolute left-0 explore-disputes-sidebar-container">
 					<ExploreDisputeSidebar />
 				</div>
-				<div className="w-3/5">
-					<h1>Person related dispute menu here</h1>
+				<div className="w-full mx-10 my-5">
+					<div className="flex justify-between">
+						<div className="w-full py-3 cursor-pointer bg-gray-100 rounded-t-lg text-center hover:bg-gray-300">
+							My Mails
+						</div>
+						<div className="w-full py-3 cursor-pointer bg-gray-100 rounded-t-lg text-center hover:bg-gray-300">
+							Filings
+						</div>
+						<div className="w-full py-3 cursor-pointer bg-gray-100 rounded-t-lg text-center hover:bg-gray-300">
+							Correspondence
+						</div>
+						<div className="w-full py-3 cursor-pointer bg-gray-100 rounded-t-lg text-center hover:bg-gray-300">
+							Notes
+						</div>
+					</div>
 				</div>
-				<div className="w-1/5 dispute-menu-container">
+				<div className="dispute-menu-container">
 					<DisputeDetailMenu />
 				</div>
 			</div>

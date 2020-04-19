@@ -1,4 +1,3 @@
-import { get } from 'lodash';
 import { useState } from 'react';
 import { ExploreDisputeTabs, ExploreDisputeTabOptions } from './ExploreDisputeTabs';
 import { DisputeSearch } from './DisputeSearch';
@@ -28,7 +27,7 @@ const DisputeMapMockData = {
 			lastUpdate: 'Next Hearing on 14th April, 2020',
 		}
 	],
-}
+};
 
 const ExploreDisputeSidebar = () => {
 	const [selectedTab, setSelectedTab] = useState(ExploreDisputeTabOptions.ONGOING);
