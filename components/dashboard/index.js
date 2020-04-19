@@ -1,6 +1,6 @@
 import Header from "@components/common/header";
-import DisputeDetailMenu from "@components/common/DisputeDetailMenu";
-import ExploreDisputeSidebar from "@components/common/ExploreDisputeSidebar";
+import DisputeDetailMenu from "@components/dashboard/DisputeDetailMenu";
+import ExploreDisputeSidebar from "@components/dashboard/ExploreDisputeSidebar";
 
 const Dashboard = () => {
 	return (
