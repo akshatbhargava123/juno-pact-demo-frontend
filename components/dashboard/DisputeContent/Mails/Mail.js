@@ -28,16 +28,4 @@ const Mail = ({ read }) => {
 	);
 };
 
-const Mails = () => {
-	return (
-		<div>
-			<Mail />
-			<Mail />
-			<Mail read />
-			<Mail read />
-			<Mail read />
-		</div>
-	);
-};
-
-export { Mails };
+export { Mail };

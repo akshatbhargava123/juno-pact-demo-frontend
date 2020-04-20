@@ -2,7 +2,7 @@ import { useState } from 'react';
 import FlipMove from 'react-flip-move';
 import { Button } from '@chakra-ui/core';
 import SearchInput from '@components/common/SearchInput';
-import { NoteCard } from "./NoteCard";
+import { NoteCard } from './NoteCard';
 
 const NotesMockData = [
 	{
