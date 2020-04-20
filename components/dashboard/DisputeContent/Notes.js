@@ -78,7 +78,13 @@ const Notes = () => {
 					<span className="text-lg mt-5">No Results for your search</span>
 				</div>
 			)}
-
+			{!notes.length && (
+				<div className="flex flex-col items-center">
+					<img className="w-2/5 mt-10" src="/images/no-data-2.svg" alt="add notes image" />
+					<span className="text-lg mt-5">Add your personal Notes here</span>
+					<p className="text-sm text-gray-600">All emails that you star will also appear here as a note.</p>
+				</div>
+			)}
 		</div>
 	);
 };
