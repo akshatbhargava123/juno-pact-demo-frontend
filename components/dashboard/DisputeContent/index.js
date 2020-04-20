@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Mails } from './Mails';
+import { Notes } from './Notes';
 import { DisputeTabs, DisputeTabsOptions } from './DisputeTabs';
 
 const DisputeContent = () => {
@@ -11,9 +12,8 @@ const DisputeContent = () => {
 				onTabChange={setSelectedTab}
 			/>
 			<div className="my-4">
-				{selectedTab === DisputeTabsOptions.MY_MAILS && (
-					<Mails />
-				)}
+				{selectedTab === DisputeTabsOptions.MY_MAILS && <Mails />}
+				{selectedTab === DisputeTabsOptions.NOTES && <Notes />}
 			</div>
 		</div>
 	);
