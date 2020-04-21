@@ -16,6 +16,7 @@ const Mails = () => {
 					className="bg-blue-600 hover:bg-blue-300"
 					onClick={() => console.log('hello')}
 				>
+					<MailIcon size="20px" className="mr-2" />
 					Compose
 				</Button>
 			</div>
