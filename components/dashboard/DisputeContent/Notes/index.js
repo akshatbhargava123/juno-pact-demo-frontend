@@ -3,6 +3,7 @@ import FlipMove from 'react-flip-move';
 import { Button } from '@chakra-ui/core';
 import SearchInput from '@components/common/SearchInput';
 import { NoteCard } from './NoteCard';
+import { Plus } from 'react-feather';
 
 const NotesMockData = [
 	{
@@ -49,7 +50,10 @@ const Notes = () => {
 					onChange={onSearch}
 					placeholder="Search your Notes by title, description..."
 				/>
-				<Button onClick={() => console.log('hello')}>New Note</Button>
+				<Button onClick={() => console.log('hello')}>
+					<Plus size="20px" className="mr-2" />
+					New Note
+				</Button>
 			</div>
 			{!!filteredNotes.length && (
 				<div className="flex justify-start flex-wrap m-5">
