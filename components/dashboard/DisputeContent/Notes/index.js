@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { Plus } from 'react-feather';
 import FlipMove from 'react-flip-move';
-import { Button } from '@chakra-ui/core';
+import { Button, useDisclosure } from '@chakra-ui/core';
 import SearchInput from '@components/common/SearchInput';
 import { NoteCard } from './NoteCard';
-import { Plus } from 'react-feather';
+import { NoteModal } from './NoteModal';
 
 const NotesMockData = [
 	{
@@ -33,8 +34,13 @@ const NotesMockData = [
 ];
 
 const Notes = () => {
+	const { isOpen, onOpen, onClose } = useDisclosure();
 	const [notes, setNotes] = useState(NotesMockData);
 	const [filteredNotes, setFilteredNotes] = useState(NotesMockData);
+
+	const openNoteModal = () => {
+		onOpen();
+	};
 
 	const onSearch = searchText => {
 		if (!searchText) return setFilteredNotes(notes);
@@ -44,13 +50,14 @@ const Notes = () => {
 
 	return (
 		<div className="w-full">
+			<NoteModal showModal={isOpen} onClose={onClose} />
 			<div className="flex justify-between">
 				<SearchInput
 					className="w-2/3 ml-6"
 					onChange={onSearch}
 					placeholder="Search your Notes by title, description..."
 				/>
-				<Button onClick={() => console.log('hello')}>
+				<Button onClick={() => openNoteModal()}>
 					<Plus size="20px" className="mr-2" />
 					New Note
 				</Button>
