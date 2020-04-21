@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ExploreDisputeTabs, ExploreDisputeTabOptions } from './ExploreDisputeTabs';
 import { DisputeSearch } from './DisputeSearch';
 import { DisputeCard } from './DisputeCard';
+import { Menu } from 'react-feather';
 
 const DisputeMapMockData = {
 	[ExploreDisputeTabOptions.ONGOING]: [
@@ -33,33 +34,42 @@ const ExploreDisputeSidebar = () => {
 	const [selectedTab, setSelectedTab] = useState(ExploreDisputeTabOptions.ONGOING);
 	const [disputeMap, setDisputeMap] = useState(DisputeMapMockData);
 	return (
-		<div className="relative flex flex-col items-center z-50 h-full w-full bg-white shadow">
-			<div className="w-full my-2 px-3">
-				<DisputeSearch />
+		<div className="relative flex h-full z-50">
+			<div className="relative flex flex-col items-center h-full w-full bg-white shadow">
+				<div className="w-full my-2 px-3">
+					<DisputeSearch />
+				</div>
+				{disputeMap[selectedTab] && (
+					<div className="w-full px-3 overflow-y-scroll mb-12">
+						{disputeMap[selectedTab].map(dispute => (
+							<DisputeCard
+								key={dispute.id}
+								plaintiff={dispute.plaintiff}
+								defendant={dispute.defendant}
+								category={dispute.category}
+								lastUpdate={dispute.lastUpdate}
+							/>
+						))}
+					</div>
+				)}
+				{!disputeMap[selectedTab] && (
+					<div className="flex-center flex-col h-full">
+						<img src="images/no-data.svg" className="w-48" />
+						<span className="font-thin text-xl">No {selectedTab} Disputes</span>
+					</div>
+				)}
+				<ExploreDisputeTabs
+					selectedTab={selectedTab}
+					onTabChange={setSelectedTab}
+				/>
 			</div>
-			{disputeMap[selectedTab] && (
-				<div className="w-full px-3 overflow-y-scroll mb-12">
-					{disputeMap[selectedTab].map(dispute => (
-						<DisputeCard
-							key={dispute.id}
-							plaintiff={dispute.plaintiff}
-							defendant={dispute.defendant}
-							category={dispute.category}
-							lastUpdate={dispute.lastUpdate}
-						/>
-					))}
+			<div>
+				<div className="absolute flex-center h-full dispute-sidebar-handle">
+					<div className="flex-center h-56 w-8 bg-gray-100 shadow-lg border-lg rounded-tr-lg rounded-br-lg">
+						<Menu />
+					</div>
 				</div>
-			)}
-			{!disputeMap[selectedTab] && (
-				<div className="flex-center flex-col h-full">
-					<img src="images/no-data.svg" className="w-48" />
-					<span className="font-thin text-xl">No {selectedTab} Disputes</span>
-				</div>
-			)}
-			<ExploreDisputeTabs
-				selectedTab={selectedTab}
-				onTabChange={setSelectedTab}
-			/>
+			</div>
 		</div>
 	);
 };

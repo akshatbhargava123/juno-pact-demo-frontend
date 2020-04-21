@@ -25,7 +25,7 @@ const Dashboard = () => {
 				.explore-disputes-sidebar-container {
 					min-width: 26rem;
 					height: calc(100vh - 4rem);
-					left: -25rem;
+					left: -26rem;
 					transition: .5s all;
 				}
 				.explore-disputes-sidebar-container:hover {
