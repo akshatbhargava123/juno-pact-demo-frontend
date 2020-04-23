@@ -1,13 +1,16 @@
 const ExploreDisputeTabOptions = {
+	ALL: 'All',
 	ONGOING: 'Ongoing',
-	PENDING: 'Pending',
+	WITHDRAWN: 'Withdrawn',
+	REJECTED: 'Rejected',
 	SETTLED: 'Settled',
+	STARRED: 'Starred',
 };
 
 const Tab = ({ option, selected, onTabClick }) => (
 	<div
 		className={`
-			w-1/3 hover:bg-gray-200 h-full capitalise cursor-pointer border-r flex-center
+			w-32 hover:bg-gray-200 h-full capitalise cursor-pointer border-r flex-center
 			${selected && 'bg-gray-200'}
 		`}
 		onClick={onTabClick}
@@ -19,7 +22,7 @@ const Tab = ({ option, selected, onTabClick }) => (
 const ExploreDisputeTabs = ({ selectedTab, onTabChange }) => {
 	const options = ExploreDisputeTabOptions;
 	return (
-		<div className="absolute w-full bottom-0 h-12 flex-center border-t">
+		<div className="absolute bottom-0 h-12 flex-center border-t">
 			{Object.keys(options).map(tabKey => (
 					<Tab
 						key={tabKey}
