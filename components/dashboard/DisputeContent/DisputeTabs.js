@@ -2,15 +2,11 @@ import { Circle, Mail, Briefcase, GitPullRequest, Edit3 } from "react-feather";
 
 const DisputeTabsOptions = {
 	MY_MAILS: 'My Mails',
-	FILINGS: 'Filings',
-	CORRESPONDENCE: 'Corresponsdence',
 	NOTES: 'Notes',
 };
 
 const DisputeTabsIcons = {
 	MY_MAILS: Mail,
-	FILINGS: Briefcase,
-	CORRESPONDENCE: GitPullRequest,
 	NOTES: Edit3,
 };
 
