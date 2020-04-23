@@ -2,7 +2,7 @@ import { Avatar, Popover, PopoverTrigger, PopoverContent, PopoverHeader } from "
 import { Box, ChevronDown, User, Plus, LogOut, Anchor, Info, Command } from "react-feather";
 
 const HeaderMenuItem = ({ text, Icon }) => (
-	<li className="cursor-pointer flex items-center text-sm my-1 p-2 mx-3 hover:text-blue-700">
+	<li tabIndex={0} className="cursor-pointer flex items-center text-sm my-1 p-2 mx-3 hover:text-blue-700">
 		<Icon size="20px" className="mr-2" />
 		<span>{text}</span>
 	</li>
