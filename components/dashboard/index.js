@@ -20,11 +20,11 @@ const Dashboard = () => {
 			</div>
 			<style jsx>{`
 				.page-content {
-					height: calc(100vh - 4rem);	
+					height: calc(100vh - 3rem);	
 				}
 				.explore-disputes-sidebar-container {
 					min-width: 48rem;
-					height: calc(100vh - 4rem);
+					height: calc(100vh - 3rem);
 					left: -48rem;
 					transition: .5s all;
 				}
