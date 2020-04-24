@@ -1,12 +1,16 @@
+import useHover from "@components/common/hooks/useHover";
+
 const HoverCircularEffect = ({
 	onParentClick,
 	children,
 	hoverBgColor = 'gray',
 	className = 'p-2'
 }) => {
+	const [hoverRef, isHovered] = useHover();
 	return (
 		<div
 			tabIndex={0}
+			ref={hoverRef}
 			className={`
 				flex-center rounded transition-duration-200 cursor-pointer rounded-full outline-none
 				hover:bg-${hoverBgColor}-300 hover:text-red-500
@@ -19,7 +23,7 @@ const HoverCircularEffect = ({
 				e.preventDefault();
 			}}
 		>
-			{children}
+			{typeof children === 'object' ? children : children({ isHovered })}
 		</div>
 	);
 };
