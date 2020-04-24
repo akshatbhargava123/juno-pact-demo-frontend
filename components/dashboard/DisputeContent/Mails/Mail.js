@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Avatar, Checkbox } from '@chakra-ui/core';
+import { Avatar } from '@chakra-ui/core';
 import { Trash, Star, Eye } from 'react-feather';
+import Checkbox from '@components/common/Checkbox';
 
 const Mail = ({ read }) => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -13,9 +14,7 @@ const Mail = ({ read }) => {
 			onMouseOver={() => setIsHovered(true)}
 			onMouseOut={() => setIsHovered(false)}
 		>
-			<div className="p-4 flex-center rounded transition-duration-200 cursor-pointer hover:bg-gray-300 hover:text-yellow-700 rounded-full">
-				<Checkbox size="md" borderColor="gray.400" color="gray.900" />
-			</div>
+			<Checkbox />
 			<div className="p-2 mr-4 rounded transition-duration-200 cursor-pointer hover:bg-gray-300 hover:text-yellow-700 rounded-full">
 				<Star strokeWidth="1px" />
 			</div>
