@@ -1,7 +1,8 @@
-import { Mail } from './Mail';
-import SearchInput from '@components/common/SearchInput';
-import { Button } from '@chakra-ui/core';
 import { Mail as MailIcon } from 'react-feather';
+import { Button } from '@chakra-ui/core';
+import SearchInput from '@components/common/SearchInput';
+import { MailControls } from './MailControls';
+import { Mail } from './Mail';
 
 const Mails = () => {
 	return (
@@ -20,8 +21,8 @@ const Mails = () => {
 					Compose
 				</Button>
 			</div>
-
 			<div className="mt-10">
+				<MailControls />
 				<Mail />
 				<Mail />
 				<Mail read />
