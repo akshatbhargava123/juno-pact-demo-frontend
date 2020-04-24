@@ -5,7 +5,10 @@ import HoverCircularEffect from '@components/common/HoverCircularEffect';
 const Checkbox = ({ defaultChecked = false }) => {
 	const [checked, setChecked] = useState(defaultChecked);
 	return (
-		<HoverCircularEffect onParentClick={() => setChecked(!checked)}>
+		<HoverCircularEffect
+			onParentClick={() => setChecked(!checked)}
+			className="p-4"
+		>
 			<ChakraCheckbox
 				size="md"
 				color="gray.900"

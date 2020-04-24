@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Avatar } from '@chakra-ui/core';
 import { Trash, Star, Eye } from 'react-feather';
 import Checkbox from '@components/common/Checkbox';
+import HoverCircularEffect from '@components/common/HoverCircularEffect';
 
 const Mail = ({ read }) => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -15,9 +16,9 @@ const Mail = ({ read }) => {
 			onMouseOut={() => setIsHovered(false)}
 		>
 			<Checkbox />
-			<div className="p-2 mr-4 rounded transition-duration-200 cursor-pointer hover:bg-gray-300 hover:text-yellow-700 rounded-full">
+			<HoverCircularEffect className="p-2 mr-4">
 				<Star strokeWidth="1px" />
-			</div>
+			</HoverCircularEffect>
 			<Avatar src="https://www.biography.com/.image/t_share/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg" />
 			<div className="flex flex-col ml-4">
 				<p className="text-lg">Rahul Sharma</p>
