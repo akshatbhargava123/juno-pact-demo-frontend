@@ -1,5 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
-import EditorJS from '@editorjs/editorjs';
+import { useState } from 'react';
 import { SlideIn, Modal, ModalBody, ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalFooter, Button } from '@chakra-ui/core';
 import ReactQuill from 'react-quill';
 
@@ -22,21 +21,23 @@ const NoteModal = ({ showModal, onClose }) => {
 			{styles => (
 				<Modal isOpen={true} onClose={onClose} closeOnOverlayClick={false} size="40rem">
 					<ModalOverlay opacity="0.9" />
-					<ModalContent pb={5} {...styles} height="70vh">
+					<ModalContent pb={5} {...styles} height="80vh">
 						<ModalHeader>
 							<input
 								value={title}
+								placeholder="Give this note a title..."
+								onChange={e => setTitle(e.target.value)}
 								className="outline-none border-b border-gray-500 text-2xl"
 							/>
 							<ModalCloseButton onClick={onClose} />
 						</ModalHeader>
 						<ModalBody>
-							<div style={{ height: 400 }} onClick={() => setEditable(true)}>
+							<div style={{ height: 450 }} onClick={() => setEditable(true)}>
 								<ReactQuill
-									style={{ height: '100%' }}
-									{...editorProps}
 									value={value}
 									onChange={setValue}
+									style={{ height: '100%' }}
+									{...editorProps}
 								/>
 							</div>
 						</ModalBody>
