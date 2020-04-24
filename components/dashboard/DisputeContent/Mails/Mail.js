@@ -17,7 +17,7 @@ const Mail = ({ read }) => {
 		>
 			<Checkbox />
 			<HoverCircularEffect className="p-2 mr-4">
-				<Star strokeWidth="1px" />
+				<Star strokeWidth="0px" fill="#F4B500" />
 			</HoverCircularEffect>
 			<Avatar src="https://www.biography.com/.image/t_share/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg" />
 			<div className="flex flex-col ml-4">
