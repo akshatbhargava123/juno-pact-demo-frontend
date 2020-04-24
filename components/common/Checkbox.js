@@ -6,7 +6,10 @@ const Checkbox = ({ defaultChecked = false }) => {
 	return (
 		<div
 			className="p-4 flex-center rounded transition-duration-200 cursor-pointer hover:bg-gray-300 hover:text-yellow-700 rounded-full"
-			onClick={() => setChecked(!checked)}
+			onClick={(e) => {
+				setChecked(!checked)
+				e.preventDefault();
+			}}
 		>
 			<ChakraCheckbox
 				size="md"
