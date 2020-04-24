@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import { ChevronDown } from "react-feather"
+import { ChevronDown, RefreshCw } from "react-feather"
 import { Popover, PopoverTrigger, PopoverContent } from "@chakra-ui/core";
 import Checkbox from "@components/common/Checkbox"
+import HoverCircularEffect from "@components/common/HoverCircularEffect";
 
 const MailControls = () => {
 	const containerRef = useRef();
@@ -28,6 +29,11 @@ const MailControls = () => {
 						</div>
 					</PopoverContent>
 				</Popover>
+			</div>
+			<div>
+				<HoverCircularEffect onParentClick={console.log}>
+					<RefreshCw className="text-gray-500" size="20px" />
+				</HoverCircularEffect>
 			</div>
 		</div>
 	);
