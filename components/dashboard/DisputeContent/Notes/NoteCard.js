@@ -13,17 +13,17 @@ const NoteCard = ({ title, description }) => {
 			<h1 className="font-semibold">{title}</h1>
 			<p className="text-sm">{description}</p>
 			<div className="absolute right-0 bottom-0 flex m-1" hidden={!isHovered}>
-				<HoverCircularEffect>
+				<HoverCircularEffect tooltipOptions={{ label: 'Send as Email' }}>
 					{({ isHovered }) => (
 						<Mail size="20px" className={`text-${isHovered ? 'blue' : 'gray'}-500`} />
 					)}
 				</HoverCircularEffect>
-				<HoverCircularEffect>
+				<HoverCircularEffect tooltipOptions={{ label: 'Clone Note' }}>
 					{({ isHovered }) => (
 						<Copy size="20px" className={`text-${isHovered ? 'blue' : 'gray'}-500`} />
 					)}
 				</HoverCircularEffect>
-				<HoverCircularEffect>
+				<HoverCircularEffect tooltipOptions={{ label: 'Delete Note' }}>
 					{({ isHovered }) => (
 						<Trash2 size="20px" className={`text-${isHovered ? 'red	' : 'gray'}-500`} />
 					)}
