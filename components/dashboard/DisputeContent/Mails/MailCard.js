@@ -4,7 +4,7 @@ import { Trash, Star, Eye } from 'react-feather';
 import Checkbox from '@components/common/Checkbox';
 import HoverCircularEffect from '@components/common/HoverCircularEffect';
 
-const Mail = ({ read }) => {
+const MailCard = ({ read }) => {
 	const [isHovered, setIsHovered] = useState(false);
 	return (
 		<div
@@ -43,4 +43,4 @@ const Mail = ({ read }) => {
 	);
 };
 
-export { Mail };
+export { MailCard };
