@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import { ThemeProvider, CSSReset } from '@chakra-ui/core';
 
-const Page = ({ title, children }) => {
+const Page = ({ title, children, layoutProvider }) => {
+	if (layoutProvider) children = layoutProvider(children);
 	return (
 		<ThemeProvider>
 			<CSSReset />
