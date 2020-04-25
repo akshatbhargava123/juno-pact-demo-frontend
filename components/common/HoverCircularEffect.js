@@ -2,11 +2,11 @@ import { Tooltip } from "@chakra-ui/core";
 import useHover from "@components/common/hooks/useHover";
 
 const HoverCircularEffect = ({
-	onParentClick,
 	children,
 	tooltipOptions,
 	hoverBgColor = 'gray',
-	className = 'p-2'
+	className = 'p-2',
+	onParentClick = () => {},
 }) => {
 	const [hoverRef, isHovered] = useHover();
 	tooltipOptions = tooltipOptions || {};
@@ -15,7 +15,7 @@ const HoverCircularEffect = ({
 	}
 	return (
 		<Tooltip placement="top" hasArrow {...tooltipOptions}>
-			<div className="rounded-full">
+			<div className="rounded-full" onKeyPress={e => e.which === 13 && onParentClick()}>
 				<div
 					tabIndex={0}
 					ref={hoverRef}
@@ -27,7 +27,7 @@ const HoverCircularEffect = ({
 						${className}
 					`}
 					onClick={(e) => {
-						if (onParentClick) onParentClick();
+						onParentClick();
 						e.preventDefault();
 					}}
 				>
