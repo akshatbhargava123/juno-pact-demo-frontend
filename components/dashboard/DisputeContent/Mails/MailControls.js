@@ -32,34 +32,34 @@ const MailControls = ({ selectedMails }) => {
 			</div>
 			<div className="mx-2 flex">
 				<div className="mr-3">
-					<HoverCircularEffect onParentClick={console.log}>
+					<HoverCircularEffect tooltipOptions={{ label: 'Refresh' }}>
 						<RefreshCw className="text-gray-500" size="20px" />
 					</HoverCircularEffect>
 				</div>
 				{true && (
 					<>
 						<div className="mr-3">
-							<HoverCircularEffect onParentClick={console.log}>
+							<HoverCircularEffect tooltipOptions={{ label: 'Mark as read' }}>
 								<Eye className="text-gray-500" size="20px" />
 							</HoverCircularEffect>
 						</div>
 						<div className="mr-3">
-							<HoverCircularEffect onParentClick={console.log}>
+							<HoverCircularEffect tooltipOptions={{ label: 'Mark as unread' }}>
 								<EyeOff className="text-gray-500" size="20px" />
 							</HoverCircularEffect>
 						</div>
 						<div className="mr-3">
-							<HoverCircularEffect onParentClick={console.log}>
+							<HoverCircularEffect tooltipOptions={{ label: 'Delete' }}>
 								<Trash className="text-gray-500" size="20px" />
 							</HoverCircularEffect>
 						</div>
 						<div className="mr-3">
-							<HoverCircularEffect onParentClick={console.log}>
+							<HoverCircularEffect tooltipOptions={{ label: 'Star' }}>
 								<Star className="text-gray-500" size="20px" />
 							</HoverCircularEffect>
 						</div>
 						<div className="mr-3">
-							<HoverCircularEffect onParentClick={console.log}>
+							<HoverCircularEffect tooltipOptions={{ label: 'Move to Notes' }}>
 								<Edit3 className="text-gray-500" size="20px" />
 							</HoverCircularEffect>
 						</div>
