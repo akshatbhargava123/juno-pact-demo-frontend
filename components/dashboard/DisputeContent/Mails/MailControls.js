@@ -9,7 +9,7 @@ const MailControls = ({ selectedMails }) => {
 	return (
 		<div className="bg-gray-200 flex items-center px-5">
 			<div className="flex items-center">
-				<Checkbox />
+				<Checkbox tooltipOptions={{ label: 'Select all' }} />
 				<Popover trigger="click" initialFocusRef={containerRef}>
 					<PopoverTrigger>
 						<div>
