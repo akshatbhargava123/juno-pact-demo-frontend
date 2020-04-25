@@ -9,7 +9,7 @@ const Mails = () => {
 		<div className="w-full">
 			<div className="flex justify-between">
 				<SearchInput
-					className="w-2/3 ml-6"
+					className="w-2/3"
 					onChange={() => {}}
 					placeholder="Search mail"
 				/>
