@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Avatar } from '@chakra-ui/core';
+import { Avatar, Badge } from '@chakra-ui/core';
 import { Trash, Star, Eye } from 'react-feather';
 import Checkbox from '@components/common/Checkbox';
 import HoverCircularEffect from '@components/common/HoverCircularEffect';
+import UserBadge from '@components/common/UserBadge';
 
 const MailCard = ({ read }) => {
 	const [isHovered, setIsHovered] = useState(false);
@@ -21,10 +22,10 @@ const MailCard = ({ read }) => {
 			</HoverCircularEffect>
 			<Avatar src="https://www.biography.com/.image/t_share/MTY2MzU3Nzk2OTM2MjMwNTkx/elon_musk_royal_society.jpg" />
 			<div className="flex flex-col ml-4">
-				<p className="text-lg">Rahul Sharma</p>
-				<span className="text-gray-600">Mediator</span>
+				<p>Rahul Sharma</p>
+				<UserBadge role="mediator" />
 			</div>
-			<div className="ml-10 w-3/6">
+			<div className="ml-10 w-3/6 text-sm text-gray-700">
 				<p>Hey, Elon, I've been writing to you since last 10 months...</p>
 				<span className="text-gray-600">02:00 PM, 12th Dec, 2020</span>
 			</div>
