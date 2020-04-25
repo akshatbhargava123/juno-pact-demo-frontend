@@ -36,6 +36,7 @@ const NoteModal = ({ showModal, onClose }) => {
 								<ReactQuill
 									value={value}
 									onChange={setValue}
+									placeholder="Write your note content here..."
 									style={{ height: '100%' }}
 									{...editorProps}
 								/>
