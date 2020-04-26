@@ -11,9 +11,13 @@ const withDashboardLayout = (children) => {
 				<div className="absolute left-0 explore-disputes-sidebar-container">
 					<ExploreDisputeSidebar />
 				</div>
-				<div className="w-full mx-10 dashboard-content">
-					<Breadcrumb />
-					{children()}
+				<div className="w-full mx-10">
+					<div className="w-full mx-5 my-5">
+						<Breadcrumb />
+						<div className="dashboard-content">
+							{children()}
+						</div>
+					</div>
 				</div>
 				<div className="dispute-menu-container">
 					<DisputeDetailMenu />
@@ -25,7 +29,6 @@ const withDashboardLayout = (children) => {
 				}
 				.dashboard-content {
 					animation: fadein 500ms;
-					
 				}
 				@keyframes fadein {
 					from { opacity: 0; transform: scale(0.7); }

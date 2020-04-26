@@ -2,15 +2,15 @@ import dynamic from 'next/dynamic';
 import Page from '@components/common/page';
 import withDashboardLayout from '@components/common/layouts/dashboard';
 
-const DashboardComponent = dynamic(
-  () => import('@components/dashboard').then(mod => mod.default),
+const MailsComponent = dynamic(
+  () => import('@components/dashboard/DisputeContent/Mails').then(mod => mod.Mails),
   { ssr: false }
 );
 
-const DashboardPage = () => (
+const MailsPage = () => (
   <Page title="Home" layoutProvider={withDashboardLayout}>
-    {() => <DashboardComponent />}
+    {() => <MailsComponent />}
   </Page>
 );
 
-export default DashboardPage;
+export default MailsPage;
