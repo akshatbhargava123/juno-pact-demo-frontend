@@ -12,7 +12,7 @@ const Breadcrumb = () => {
 				separator={<ChevronRight strokeWidth="1px" size="20px" />}
 			>
 				<BreadcrumbItem>
-					<BreadcrumbLink href="/about">
+					<BreadcrumbLink href="#">
 						<div className="flex-center">
 							<p className="mr-2">Rahul VS Yes Bank</p>
 							<UserBadge role="mediator" className="px-2 py-px no-underline" />
@@ -21,17 +21,17 @@ const Breadcrumb = () => {
 				</BreadcrumbItem>
 			
 				<BreadcrumbItem isCurrentPage>
-					<BreadcrumbLink href="/about">Mails</BreadcrumbLink>
+					<BreadcrumbLink href="/mails">Mails</BreadcrumbLink>
 				</BreadcrumbItem>
 			</ChakraBreadcrumb>
 			<div className="ml-auto my-5 flex">
-				<Link href="#">
+				<Link href="mails">
 					<a className="w-24 text-center flex-center hover:text-blue-500">
 						<Mail strokeWidth="1px" size="20px" />
 						<span className="ml-2 font-thin">Mails</span>
 					</a>
 				</Link>
-				<Link href="#">
+				<Link href="notes">
 					<a className="w-24 text-center flex-center hover:text-blue-500">
 						<Edit3 strokeWidth="1px" size="20px" />
 						<span className="ml-2 font-thin">Notes</span>
