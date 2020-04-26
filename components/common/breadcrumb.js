@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import { Mail, Edit3, ChevronRight } from 'react-feather';
-import { BreadcrumbItem, Breadcrumb, BreadcrumbLink } from '@chakra-ui/core';
+import { BreadcrumbItem, Breadcrumb as ChakraBreadcrumb, BreadcrumbLink } from '@chakra-ui/core';
 import UserBadge from '@components/common/UserBadge';
 
 const Breadcrumb = () => {
 	return (
 		<div className="w-full flex items-center">
-			<Breadcrumb
+			<ChakraBreadcrumb
 				fontWeight="medium" fontSize="sm"
 				spacing="8px"
 				separator={<ChevronRight strokeWidth="1px" size="20px" />}
@@ -23,7 +23,7 @@ const Breadcrumb = () => {
 				<BreadcrumbItem isCurrentPage>
 					<BreadcrumbLink href="/about">Mails</BreadcrumbLink>
 				</BreadcrumbItem>
-			</Breadcrumb>
+			</ChakraBreadcrumb>
 			<div className="ml-auto my-5 flex">
 				<Link href="#">
 					<a className="w-24 text-center flex-center hover:text-blue-500">

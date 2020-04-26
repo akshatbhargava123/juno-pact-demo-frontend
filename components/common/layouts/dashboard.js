@@ -1,6 +1,7 @@
 import Header from "@components/common/header";
 import DisputeDetailMenu from "@components/dashboard/DisputeDetailMenu";
 import ExploreDisputeSidebar from "@components/dashboard/ExploreDisputeSidebar";
+import Breadcrumb from "@components/common/breadcrumb";
 
 const withDashboardLayout = (children) => {
 	return () => (
@@ -11,6 +12,7 @@ const withDashboardLayout = (children) => {
 					<ExploreDisputeSidebar />
 				</div>
 				<div className="w-full mx-10 dashboard-content">
+					<Breadcrumb />
 					{children()}
 				</div>
 				<div className="dispute-menu-container">
