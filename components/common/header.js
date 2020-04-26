@@ -11,7 +11,7 @@ const HeaderMenuItem = ({ text, Icon }) => (
 const Header = () => {
 	return (
 		<div className="h-12 bg-gray-800 flex justify-between items-center px-10">
-			<img src="images/logo.svg" alt="logo" width="160px" />
+			<img src="/images/logo.svg" alt="logo" width="160px" />
 			<Popover trigger="hover">
 				<PopoverTrigger>
 					<div className="flex items-center cursor-pointer rounded p-1 px-2 hover:bg-gray-700">
