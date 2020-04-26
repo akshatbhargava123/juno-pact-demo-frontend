@@ -30,23 +30,19 @@ const DisputeContent = () => {
 						</BreadcrumbLink>
 					</BreadcrumbItem>
 				
-					<BreadcrumbItem>
-						<BreadcrumbLink href="/about">About</BreadcrumbLink>
-					</BreadcrumbItem>
-				
 					<BreadcrumbItem isCurrentPage>
-						<BreadcrumbLink href="/contact">Contact</BreadcrumbLink>
+						<BreadcrumbLink href="/about">Mails</BreadcrumbLink>
 					</BreadcrumbItem>
 				</Breadcrumb>
-				<div className="ml-auto flex">
-					<Link href="/dashboard">
-						<a className="w-24 text-center flex-center hover:text-blue-500">
+				<div className="ml-auto my-5 flex">
+					<Link href="#">
+						<a className="w-24 text-center flex-center hover:text-blue-500" onClick={() => setSelectedTab(DisputeTabsOptions.MY_MAILS)}>
 							<Mail strokeWidth="1px" size="20px" />
 							<span className="ml-2 font-thin">Mails</span>
 						</a>
 					</Link>
-					<Link href="/dashboard">
-						<a className="w-24 text-center flex-center hover:text-blue-500">
+					<Link href="#">
+						<a className="w-24 text-center flex-center hover:text-blue-500" onClick={() => setSelectedTab(DisputeTabsOptions.NOTES)}>
 							<Edit3 strokeWidth="1px" size="20px" />
 							<span className="ml-2 font-thin">Notes</span>
 						</a>

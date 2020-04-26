@@ -53,7 +53,7 @@ const Notes = () => {
 			<NoteModal showModal={isOpen} onClose={onClose} />
 			<div className="flex justify-between">
 				<SearchInput
-					className="w-2/3 ml-6"
+					className="w-2/3"
 					onChange={onSearch}
 					placeholder="Search your Notes by title, description..."
 				/>
