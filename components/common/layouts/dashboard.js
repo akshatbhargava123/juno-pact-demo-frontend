@@ -10,7 +10,7 @@ const withDashboardLayout = (children) => {
 				<div className="absolute left-0 explore-disputes-sidebar-container">
 					<ExploreDisputeSidebar />
 				</div>
-				<div className="w-full mx-10 my-5">
+				<div className="w-full mx-10 dashboard-content">
 					{children()}
 				</div>
 				<div className="dispute-menu-container">
@@ -20,6 +20,14 @@ const withDashboardLayout = (children) => {
 			<style jsx>{`
 				.page-content {
 					height: calc(100vh - 3rem);	
+				}
+				.dashboard-content {
+					animation: fadein 500ms;
+					
+				}
+				@keyframes fadein {
+					from { opacity: 0; transform: scale(0.7); }
+					to   { opacity: 1; transform: scale(1); }
 				}
 				.explore-disputes-sidebar-container {
 					min-width: 48rem;
