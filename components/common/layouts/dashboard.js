@@ -1,5 +1,5 @@
 import Header from "@components/common/header";
-import Breadcrumb from "@components/common/breadcrumb";
+import SideMenu from "@components/common/Sidemenu";
 
 const withDashboardLayout = (children) => {
 	return () => (
@@ -7,7 +7,7 @@ const withDashboardLayout = (children) => {
 			<Header />
 			<div className="flex justify-between root-container">
 				<div className="bg-blue-900 menu text-gray-300">
-					<div>Left side menu here</div>
+					<SideMenu />
 				</div>
 				<div className="w-full mx-10">
 					<div className="dashboard-content">
