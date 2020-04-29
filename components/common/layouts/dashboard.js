@@ -1,7 +1,7 @@
 import Header from "@components/common/header";
-import DisputeDetailMenu from "@components/dashboard/DisputeDetailMenu";
-import ExploreDisputeSidebar from "@components/dashboard/ExploreDisputeSidebar";
 import Breadcrumb from "@components/common/breadcrumb";
+import DisputeDetailMenu from "@components/arbitrator-dashboard/DisputeDetailMenu";
+import ExploreDisputeSidebar from "@components/arbitrator-dashboard/ExploreDisputeSidebar";
 
 const withDashboardLayout = (children) => {
 	return () => (

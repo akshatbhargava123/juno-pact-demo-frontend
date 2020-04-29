@@ -1,4 +1,4 @@
-import DisputeContent from "@components/dashboard/DisputeContent";
+import DisputeContent from "@components/arbitrator-dashboard/DisputeContent";
 
 const Dashboard = () => {
 	return (
