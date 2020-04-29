@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 import Page from '@components/common/page';
-import withDashboardLayout from '@components/common/layouts/dashboard';
+import withDashboardLayout from '@components/common/layouts/arbitrator-dashboard';
 
 const MailsComponent = dynamic(
   () => import('@components/arbitrator-dashboard/DisputeContent/Mails').then(mod => mod.Mails),

@@ -3,7 +3,7 @@ import Breadcrumb from "@components/common/breadcrumb";
 import DisputeDetailMenu from "@components/arbitrator-dashboard/DisputeDetailMenu";
 import ExploreDisputeSidebar from "@components/arbitrator-dashboard/ExploreDisputeSidebar";
 
-const withDashboardLayout = (children) => {
+const withArbitratorDashboardLayout = (children) => {
 	return () => (
 		<div>
 			<Header />
@@ -51,4 +51,4 @@ const withDashboardLayout = (children) => {
 	);
 };
 
-export default withDashboardLayout;
+export default withArbitratorDashboardLayout;
