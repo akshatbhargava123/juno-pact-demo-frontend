@@ -6,7 +6,7 @@ const withDashboardLayout = (children) => {
 		<div>
 			<Header />
 			<div className="flex justify-between root-container">
-				<div className="bg-gray-500 menu">
+				<div className="bg-blue-900 menu text-gray-300">
 					<div>Left side menu here</div>
 				</div>
 				<div className="w-full mx-10">
@@ -14,8 +14,8 @@ const withDashboardLayout = (children) => {
 						{children()}
 					</div>
 				</div>
-				<div className="bg-gray-700 additional-menu-space">
-					<div>
+				<div className="bg-white border-l additional-menu-space">
+					<div className="">
 						Right side details here
 					</div>
 				</div>
