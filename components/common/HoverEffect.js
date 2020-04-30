@@ -15,7 +15,13 @@ const HoverEffect = ({
 	}
 
 	return (
-		<Tooltip placement="top" hasArrow {...tooltipOptions}>
+		<Tooltip
+			placement="top"
+			color="white"
+			backgroundColor="black"
+			p="0.5rem"
+			hasArrow {...tooltipOptions}
+		>
 			<div className="rounded-md" onKeyPress={e => e.which === 13 && onParentClick()}>
 				<div
 					tabIndex={0}
