@@ -9,7 +9,7 @@ const withDashboardLayout = (children) => {
 				<div className="menu text-gray-300">
 					<SideMenu />
 				</div>
-				<div className="w-full mx-10">
+				<div className="w-full">
 					<div className="dashboard-content">
 						{children()}
 					</div>
@@ -30,6 +30,7 @@ const withDashboardLayout = (children) => {
 					transition: .5s all;
 				}
 				.dashboard-content {
+					height: calc(100vh - 2rem);
 					animation: fadein 200ms;
 				}
 				.additional-menu-space {
