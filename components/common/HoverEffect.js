@@ -22,6 +22,8 @@ const HoverEffect = ({
 			color="white"
 			backgroundColor="black"
 			p="0.5rem"
+			fontSize="0.75rem"
+			rounded="0.25rem"
 			hasArrow {...tooltipOptions}
 		>
 			<div hidden={hidden} className="rounded-md" onKeyPress={e => e.which === 13 && onParentClick()}>
