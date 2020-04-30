@@ -6,7 +6,7 @@ const withDashboardLayout = (children) => {
 		<div>
 			<Header />
 			<div className="flex justify-between root-container">
-				<div className="bg-blue-900 menu text-gray-300">
+				<div className="menu text-gray-300">
 					<SideMenu />
 				</div>
 				<div className="w-full mx-10">
