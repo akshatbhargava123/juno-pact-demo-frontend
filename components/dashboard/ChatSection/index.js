@@ -1,7 +1,9 @@
+import ChannelHeader from "./ChannelHeader";
+
 const ChatSection = () => {
 	return (
-		<div className="bg-gray-200 h-full">
-		hi
+		<div className="bg-white h-full">
+			<ChannelHeader />
 		</div>
 	);
 };
