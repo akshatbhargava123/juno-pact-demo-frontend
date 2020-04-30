@@ -24,9 +24,10 @@ const HoverEffect = ({
 			p="0.5rem"
 			fontSize="0.75rem"
 			rounded="0.25rem"
+			userSelect={false}
 			hasArrow {...tooltipOptions}
 		>
-			<div hidden={hidden} className="rounded-md" onKeyPress={e => e.which === 13 && onParentClick()}>
+			<div hidden={hidden} className="select-none rounded-md" onKeyPress={e => e.which === 13 && onParentClick()}>
 				<div
 					tabIndex={0}
 					ref={hoverRef}
@@ -34,7 +35,7 @@ const HoverEffect = ({
 						flex-center rounded-md transition-duration-200 cursor-pointer outline-none
 						hover:bg-${hoverColor}-200 hover:text-${hoverColor}-600
 						focus:bg-${hoverColor}-200 focus:text-${hoverColor}-600
-						active:bg-${hoverColor}-200 active:text-${hoverColor}-600
+						active:bg-${hoverColor}-300 active:text-${hoverColor}-700
 						${className}
 					`}
 					onClick={(e) => {
