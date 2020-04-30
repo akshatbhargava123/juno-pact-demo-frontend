@@ -1,6 +1,7 @@
 import { Tooltip } from "@chakra-ui/core";
 import useHover from "@components/common/hooks/useHover";
 
+// TODO: remove this and use the generic version everywhere
 const HoverCircularEffect = ({
 	children,
 	tooltipOptions,
