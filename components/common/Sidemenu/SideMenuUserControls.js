@@ -2,7 +2,7 @@ import { ChevronDown, Circle, Edit3 } from "react-feather";
 
 const SideMenuUserControls = () => {
 	return (
-		<div className="hover:bg-blue-900 cursor-pointer border-b border-t border-gray-600">
+		<div className="select-none hover:bg-blue-900 cursor-pointer border-b border-t border-gray-600">
 			<div className="flex justify-between items-center py-3 mx-4">
 				<div className="flex-col">
 					<h1 className="text-sm font-black text-white flex items-center mb-px">
