@@ -24,6 +24,7 @@ const HoverEffect = ({
 			p="0.5rem"
 			fontSize="0.75rem"
 			rounded="0.25rem"
+			fontWeight="900"
 			userSelect={false}
 			hasArrow {...tooltipOptions}
 		>
