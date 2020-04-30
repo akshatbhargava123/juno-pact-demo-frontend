@@ -1,23 +1,18 @@
-import { Edit3, Circle, ChevronDown } from 'react-feather';
+import { Bookmark, Users } from 'react-feather';
+import { SideMenuUserControls } from './SideMenuUserControls';
 
 const SideMenu = () => {
 	return (
 		<div className="h-full bg-blue-800">
-			<div className="hover:bg-blue-900 cursor-pointer border-b border-white">
-				<div className="flex justify-between items-center py-2 mx-3">
-					<div className="flex-col">
-						<h1 className="text-sm font-black text-white flex items-center">
-							<p>Juno Pact</p>
-							<ChevronDown color="white" size="1rem" className="pl-1" />
-						</h1>
-						<p className="text-xs flex items-center">
-							<Circle color="limegreen" size="10px" fill="limegreen" className="mr-2" />
-							Akshat Bhargava
-						</p>
-					</div>
-					<div>
-						<Edit3 className="text-lg h-8 w-8 p-2 text-gray-700 bg-white rounded-full" />
-					</div>
+			<SideMenuUserControls />
+			<div>
+				<div className="flex items-center text-sm hover:bg-blue-900 py-2 px-4 cursor-pointer">
+					<Bookmark size="16px" className="mr-2" />
+					<p>Saved Items</p>
+				</div>
+				<div className="flex items-center text-sm hover:bg-blue-900 py-2 px-4 cursor-pointer">
+					<Users size="16px" className="mr-2" />
+					<p>People</p>
 				</div>
 			</div>
 		</div>
