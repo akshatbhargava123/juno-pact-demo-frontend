@@ -6,6 +6,7 @@ const HoverEffect = ({
 	tooltipOptions,
 	hoverBgColor: hoverColor = 'gray',
 	className = 'p-1',
+	hidden = false,
 	onParentClick = () => {},
 }) => {
 	const [hoverRef, isHovered] = useHover();
@@ -16,21 +17,22 @@ const HoverEffect = ({
 
 	return (
 		<Tooltip
+			showDelay={400}
 			placement="top"
 			color="white"
 			backgroundColor="black"
 			p="0.5rem"
 			hasArrow {...tooltipOptions}
 		>
-			<div className="rounded-md" onKeyPress={e => e.which === 13 && onParentClick()}>
+			<div hidden={hidden} className="rounded-md" onKeyPress={e => e.which === 13 && onParentClick()}>
 				<div
 					tabIndex={0}
 					ref={hoverRef}
 					className={`
 						flex-center rounded-md transition-duration-200 cursor-pointer outline-none
 						hover:bg-${hoverColor}-200 hover:text-${hoverColor}-600
-						focus:bg-${hoverColor}-200 hover:text-${hoverColor}-600
-						active:bg-${hoverColor}-200 hover:text-${hoverColor}-600
+						focus:bg-${hoverColor}-200 focus:text-${hoverColor}-600
+						active:bg-${hoverColor}-200 active:text-${hoverColor}-600
 						${className}
 					`}
 					onClick={(e) => {
