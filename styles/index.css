@@ -30,12 +30,16 @@
 }
 .ql-editor {
 	max-height: 9rem;
+	font-size: 14px;
 }
 .ql-active {
 	background: #cbd5e0 !important;
 }
 .ql-toolbar.ql-snow + .ql-container.ql-snow {
 	border: none;
+}
+.ql-editor.ql-blank::before {
+	font-style: normal !important;
 }
 span.ql-formats > button {
 	border-radius: 4px !important;
