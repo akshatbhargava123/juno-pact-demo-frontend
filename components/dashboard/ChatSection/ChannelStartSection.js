@@ -20,6 +20,13 @@ const PersonalChannelSection = () => (
 	</div>
 );
 
+const DisputeChannelSection = () => (
+	<div>
+		<h1 className="font-bold text-2xl"># Shubham vs Rahul</h1>
+		<p>JunoPact created this channel on April 11th. This is the very beginning of the Child custody dispute vs Shubham and Rahul. You can fill in your choices for dispute matter <span className="cursor-pointer font-bold text-blue-500">here</span>.</p>
+	</div>
+);
+
 const ChannelStartSection = ({ isGroupChannel = false }) => {
 	return (
 		<div className="absolute bottom-0 px-6 mb-2">
