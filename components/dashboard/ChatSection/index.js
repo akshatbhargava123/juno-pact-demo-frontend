@@ -8,9 +8,9 @@ const ChatSection = () => {
 	return (
 		<div className="relative bg-white h-full">
 			<ChannelHeader />
-			<div className="h-full">
+			<div>
 				<div
-					className="chat-section bg-gray-200 overflow-y-scroll"
+					className="relative overflow-y-scroll"
 					style={{ height: `calc(100vh - 8rem - ${height}px)` }}
 				>
 					<ChannelStartSection />
@@ -20,8 +20,6 @@ const ChatSection = () => {
 				</footer>
 			</div>
 			<style jsx>{`
-				.chat-section {
-				}
 				.chat-input-container {
 					max-height: 14rem;
 				}
