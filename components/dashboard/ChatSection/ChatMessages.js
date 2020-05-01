@@ -5,7 +5,7 @@ import { Avatar } from "@chakra-ui/core";
 import { get } from "lodash";
 
 const shouldShowAvatar = (m1 = {}, m2 = {}) => {
-	if (get(m1, 'user.name') !== (m2, 'user.name')) return true;
+	if (get(m1, 'user.name') !== get(m2, 'user.name')) return true;
 	t1 = Number(m1.timestamp);
 	t2 = Number(m2.timestamp);
 	if (isNaN(t1)) return true;
@@ -15,9 +15,24 @@ const shouldShowAvatar = (m1 = {}, m2 = {}) => {
 const ChatMessage = ({ prevMessage, message }) => {
 	const showAvatar = shouldShowAvatar(prevMessage, message);
 	return (
-		<div>
-			{showAvatar && <Avatar src={message.user.avatar}></Avatar>}
-			<div dangerouslySetInnerHTML={{ __html: message.text }} />
+		<div className="px-5 py-1 my-2 hover:bg-gray-200">
+			{showAvatar && (
+				<div className="flex items-center">
+					<Avatar width="2.5rem" height="2.5rem" src={message.user.avatar}></Avatar>
+					<div className="flex flex-col ml-3">
+						<div className="font-bold text-sm">
+							{message.user.name}
+						</div>
+						<div className="text-sm text-gray-800" dangerouslySetInnerHTML={{ __html: message.text }} />
+					</div>
+				</div>
+			)}
+			{!showAvatar && (
+				<div
+					className="text-sm"
+					dangerouslySetInnerHTML={{ __html: message.text }}
+				/>
+			)}
 		</div>
 	);
 };
