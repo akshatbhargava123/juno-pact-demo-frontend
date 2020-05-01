@@ -1,4 +1,8 @@
-import ReactQuill from "react-quill"
+import Quill from 'quill';
+import MagicUrl from 'quill-magic-url';
+import ReactQuill from 'react-quill';
+
+Quill.register('modules/magicUrl', MagicUrl);
 
 const ChatInput = () => {
 	return (
@@ -9,9 +13,9 @@ const ChatInput = () => {
 					toolbar: [
 						['bold', 'italic', 'underline'],
 						['code-block', 'link'],
-					]
+					],
+					magicUrl: true,
 				}}
-				toolbar={{ maxHeight: 200 }}
 				placeholder="Message Satwik"
 			/>
 		</div>
