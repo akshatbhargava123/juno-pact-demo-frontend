@@ -1,8 +1,9 @@
+import { useState } from "react";
+import useResizeObserver from "use-resize-observer";
 import ChatInput from "./ChatInput";
+import ChatMessages from "./ChatMessages";
 import ChannelHeader from "./ChannelHeader";
 import ChannelStartSection from "./ChannelStartSection";
-import useResizeObserver from "use-resize-observer";
-import { useState } from "react";
 
 const ChatSection = () => {
 	const { ref, height = 90 } = useResizeObserver();
@@ -16,6 +17,7 @@ const ChatSection = () => {
 					style={{ height: `calc(100vh - 8rem - ${height}px)` }}
 				>
 					<ChannelStartSection channelType={channelType} />
+					<ChatMessages />
 				</div>
 				<footer className="absolute bottom-0 chat-input-container pb-5 px-5 w-full" ref={ref}>
 					<ChatInput />
