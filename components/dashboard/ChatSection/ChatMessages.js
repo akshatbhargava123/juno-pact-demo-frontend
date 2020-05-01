@@ -57,7 +57,7 @@ const ChatMessages = () => {
 	}, []);
 
 	return (
-		<div className="absolute bottom-0">
+		<>
 			<ChannelStartSection channelType="dispute" />
 			{messages && messages.map((message, i) => (
 				<ChatMessage
@@ -66,7 +66,7 @@ const ChatMessages = () => {
 					prevMessage={messages[i-1]}
 				/>
 			))}
-		</div>
+		</>
 	);
 };
 

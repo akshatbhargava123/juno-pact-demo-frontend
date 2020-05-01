@@ -29,7 +29,7 @@ const DisputeChannelSection = () => (
 
 const ChannelStartSection = ({ channelType }) => {
 	return (
-		<div className="px-6 mb-2">
+		<div className="px-6 mb-2 mt-24">
 			{channelType === 'dispute' ? <DisputeChannelSection /> : <PersonalChannelSection />}
 		</div>
 	);
