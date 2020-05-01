@@ -6,12 +6,22 @@ const ChatSection = () => {
 	return (
 		<div className="relative bg-white h-full">
 			<ChannelHeader />
-			<div className="overflow-y-scroll">
-				<ChannelStartSection />
+			<div className="flex flex-col">
+				<div className="chat-section overflow-y-scroll flex-1">
+					<ChannelStartSection />
+				</div>
+				<footer className="chat-input-container pb-5 px-5 w-full">
+					<ChatInput />
+				</footer>
 			</div>
-			<div className="h-24 absolute bottom-0 pb-5 border border-gray-800 px-5 w-full">
-				<ChatInput />
-			</div>
+			<style jsx>{`
+				.chat-section {
+					height: calc(100vh - 6rem - 7rem);
+				}
+				.chat-input-container {
+					max-height: 24rem;
+				}
+			`}</style>
 		</div>
 	);
 };
