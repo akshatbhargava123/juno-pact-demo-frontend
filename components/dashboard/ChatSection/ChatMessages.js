@@ -6,18 +6,18 @@ import { get } from "lodash";
 
 const shouldShowAvatar = (m1 = {}, m2 = {}) => {
 	if (get(m1, 'user.name') !== get(m2, 'user.name')) return true;
-	t1 = Number(m1.timestamp);
-	t2 = Number(m2.timestamp);
-	if (isNaN(t1)) return true;
+	const t1 = Number(m1.timestamp);
+	const t2 = Number(m2.timestamp);
+	if (!t1 || isNaN(t1)) return true;
 	return differenceInMilliseconds(t2, t1) > 6600;
 };
 
 const ChatMessage = ({ prevMessage, message }) => {
 	const showAvatar = shouldShowAvatar(prevMessage, message);
 	return (
-		<div className="px-5 py-1 my-2 hover:bg-gray-200">
+		<div className="px-5 py-1 hover:bg-gray-200 break-all">
 			{showAvatar && (
-				<div className="flex items-center">
+				<div className="flex items-start mt-2">
 					<Avatar width="2.5rem" height="2.5rem" src={message.user.avatar}></Avatar>
 					<div className="flex flex-col ml-3">
 						<div className="font-bold text-sm">
@@ -28,10 +28,13 @@ const ChatMessage = ({ prevMessage, message }) => {
 				</div>
 			)}
 			{!showAvatar && (
-				<div
-					className="text-sm"
-					dangerouslySetInnerHTML={{ __html: message.text }}
-				/>
+				<div className="flex">
+					<p className="flex w-12 flex-shrink-0 text-right justify-center mt-1 text-xs">11:00</p>
+					<div
+						className="text-sm"
+						dangerouslySetInnerHTML={{ __html: message.text }}
+					/>
+				</div>
 			)}
 		</div>
 	);
