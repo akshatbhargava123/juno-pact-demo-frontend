@@ -49,3 +49,8 @@ span.ql-formats > button:hover {
 	background: #DDDDDD;
 	color: #edf2f7 !important;	
 }
+
+.ql-syntax {
+	background: #ebf8ff !important;
+	color: #1A202C !important;
+}
