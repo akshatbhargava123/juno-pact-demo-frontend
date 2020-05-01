@@ -19,9 +19,9 @@
 
 /* Global CSS for the editor */
 
-.ql {
-	display: flex;
-	flex-direction: column-reverse;
+.quill {
+	display: flex !important;
+	flex-direction: column-reverse !important;
 }
 .ql-toolbar {
 	margin: 1px 1px;
