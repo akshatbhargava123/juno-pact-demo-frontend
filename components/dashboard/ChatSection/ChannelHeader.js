@@ -1,20 +1,21 @@
 import { Circle, Star, Info, User } from "react-feather"
 import HoverEffect from "@components/common/HoverEffect";
 
-const ChannelHeader = ({ channelHeader = true }) => {
+const ChannelHeader = ({ channelType }) => {
+	const isDisputeChannel = channelType === 'dispute';
 	return (
 		<div className="h-16 bg-white border-b text-gray-700 flex items-center justify-between px-5">
 			<div className="flex items-center">
 				<div className="flex-col">
 					<div className="flex items-center font-bold">
-						{!channelHeader && <Circle color="limegreen" size="10px" fill="limegreen" className="mr-2 mt-px" />}
-						{channelHeader && <span className="mr-2 select-none">#</span>}
-						<h4 className={`text-sm font-bold ${channelHeader && 'text-black'}`}>Shubham VS Rahul</h4>
+						{!isDisputeChannel && <Circle color="limegreen" size="10px" fill="limegreen" className="mr-2 mt-px" />}
+						{isDisputeChannel && <span className="mr-2 select-none">#</span>}
+						<h4 className={`text-sm font-bold ${isDisputeChannel && 'text-black'}`}>Shubham VS Rahul</h4>
 						<HoverEffect tooltipOptions={{ label: 'Star conversation', placement: 'bottom' }} className="ml-2 p-1">
 							<Star size="0.75rem" className="cursor-pointer mt-1" />
 						</HoverEffect>
 					</div>
-					{channelHeader && (
+					{isDisputeChannel && (
 						<div className="flex items-center">
 							<div className="flex items-center w-8 text-sm hover:text-blue-500 cursor-pointer">
 								<User className="mr-px mt-px" size="0.9rem" />

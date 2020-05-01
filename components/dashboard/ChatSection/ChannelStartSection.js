@@ -27,10 +27,10 @@ const DisputeChannelSection = () => (
 	</div>
 );
 
-const ChannelStartSection = ({ isGroupChannel = false }) => {
+const ChannelStartSection = ({ channelType }) => {
 	return (
 		<div className="absolute bottom-0 px-6 mb-2">
-			{isGroupChannel ? <DisputeChannelSection /> : <PersonalChannelSection />}
+			{channelType === 'dispute' ? <DisputeChannelSection /> : <PersonalChannelSection />}
 		</div>
 	);
 };
