@@ -28,6 +28,9 @@
 	background: #F8F8F8 !important;
 	border: none !important;
 }
+.ql-editor {
+	max-height: 9rem;
+}
 .ql-active {
 	background: #cbd5e0 !important;
 }
