@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { differenceInMilliseconds } from "date-fns";
 import { Avatar } from "@chakra-ui/core";
 import { get } from "lodash";
+import useHover from "@components/common/hooks/useHover";
 
 const shouldShowAvatar = (m1 = {}, m2 = {}) => {
 	if (get(m1, 'user.name') !== get(m2, 'user.name')) return true;
@@ -13,15 +14,17 @@ const shouldShowAvatar = (m1 = {}, m2 = {}) => {
 };
 
 const ChatMessage = ({ prevMessage, message }) => {
+	const [hoverRef, isHovered] = useHover();
 	const showAvatar = shouldShowAvatar(prevMessage, message);
 	return (
-		<div className="px-5 py-1 hover:bg-gray-200 break-all">
+		<div className="px-5 py-1 hover:bg-gray-200 break-all" ref={hoverRef}>
 			{showAvatar && (
 				<div className="flex items-start mt-2">
 					<Avatar width="2.5rem" height="2.5rem" src={message.user.avatar}></Avatar>
 					<div className="flex flex-col ml-3">
 						<div className="font-bold text-sm">
 							{message.user.name}
+							<span className="text-xs text-gray-600 ml-1 font-thin">11:00 PM</span>
 						</div>
 						<div className="text-sm text-gray-800" dangerouslySetInnerHTML={{ __html: message.text }} />
 					</div>
@@ -29,7 +32,9 @@ const ChatMessage = ({ prevMessage, message }) => {
 			)}
 			{!showAvatar && (
 				<div className="flex">
-					<p className="flex w-12 flex-shrink-0 text-right justify-center mt-1 text-xs">11:00</p>
+					<p className="flex w-12 flex-shrink-0 text-right justify-center mt-1 text-xs">
+						<span hidden={!isHovered}>11:00</span>
+					</p>
 					<div
 						className="text-sm"
 						dangerouslySetInnerHTML={{ __html: message.text }}
