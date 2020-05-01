@@ -9,15 +9,18 @@ const ChannelHeader = ({ channelHeader = true }) => {
 					<div className="flex items-center font-bold">
 						{!channelHeader && <Circle color="limegreen" size="10px" fill="limegreen" className="mr-2 mt-px" />}
 						{channelHeader && <span className="mr-2 select-none">#</span>}
-						<h4 className={`text-sm font-bold ${channelHeader && 'text-black'}`}>Shubham Kapaley</h4>
+						<h4 className={`text-sm font-bold ${channelHeader && 'text-black'}`}>Shubham VS Rahul</h4>
 						<HoverEffect tooltipOptions={{ label: 'Star conversation', placement: 'bottom' }} className="ml-2 p-1">
 							<Star size="0.75rem" className="cursor-pointer mt-1" />
 						</HoverEffect>
 					</div>
 					{channelHeader && (
-						<div className="flex items-center w-12 text-sm hover:text-blue-500 cursor-pointer">
-							<User className="mr-px mt-px" size="0.9rem" />
-							<span>5</span>
+						<div className="flex items-center">
+							<div className="flex items-center w-8 text-sm hover:text-blue-500 cursor-pointer">
+								<User className="mr-px mt-px" size="0.9rem" />
+								<span>5</span>
+							</div>
+							<span className="text-sm text-gray-600">Child Custody</span>
 						</div>
 					)}
 				</div>
