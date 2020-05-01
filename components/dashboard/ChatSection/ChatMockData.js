@@ -1,7 +1,7 @@
 export const ChatsMockData = [
 	{
 		timestamp: 1588321478260,
-		text: 'Chatting',
+		text: 'asfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglks',
 		user: {
 			name: 'Akshat',
 			avatar: 'asjknfas'
@@ -26,6 +26,14 @@ export const ChatsMockData = [
 	{
 		timestamp: 1588321595869,
 		text: '<strong><u>YES</u></strong>',
+		user: {
+			name: 'Akshat',
+			avatar: 'asjknfasasd'
+		}
+	},
+	{
+		timestamp: 1588321595880,
+		text: 'asfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglksasfksndglks!',
 		user: {
 			name: 'Akshat',
 			avatar: 'asjknfasasd'
