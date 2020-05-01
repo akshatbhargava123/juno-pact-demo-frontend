@@ -4,6 +4,7 @@ import { differenceInMilliseconds } from "date-fns";
 import { Avatar } from "@chakra-ui/core";
 import { get } from "lodash";
 import useHover from "@components/common/hooks/useHover";
+import ChannelStartSection from "./ChannelStartSection";
 
 const shouldShowAvatar = (m1 = {}, m2 = {}) => {
 	if (get(m1, 'user.name') !== get(m2, 'user.name')) return true;
@@ -47,23 +48,24 @@ const ChatMessage = ({ prevMessage, message }) => {
 
 const ChatMessages = () => {
 	const [messages, setMessages] = useState();
+
 	useEffect(() => {
 		const sortedByTimestamp = ChatsMockData.sort((m1, m2) => {
 			return m1.timestamp < m2.timestamp ? -1 : 1;
 		})
 		setMessages(sortedByTimestamp);
 	}, []);
+
 	return (
-		<div>
-			<div>
-				{messages && messages.map((message, i) => (
-					<ChatMessage
-						key={i}
-						message={message}
-						prevMessage={messages[i-1]}
-					/>
-				))}
-			</div>
+		<div className="absolute bottom-0">
+			<ChannelStartSection channelType="dispute" />
+			{messages && messages.map((message, i) => (
+				<ChatMessage
+					key={i}
+					message={message}
+					prevMessage={messages[i-1]}
+				/>
+			))}
 		</div>
 	);
 };

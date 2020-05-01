@@ -9,14 +9,13 @@ const ChatSection = () => {
 	const { ref, height = 90 } = useResizeObserver();
 	const [channelType] = useState('personal'); // 'dispute' / 'personal'
 	return (
-		<div className="relative bg-white h-full">
+		<div className="relative bg-white h-full w-full">
 			<ChannelHeader channelType={channelType} />
 			<div>
 				<div
 					className="relative overflow-y-scroll"
 					style={{ height: `calc(100vh - 8rem - ${height}px)` }}
 				>
-					<ChannelStartSection channelType={channelType} />
 					<ChatMessages />
 				</div>
 				<footer className="absolute bottom-0 chat-input-container pb-5 px-5 w-full" ref={ref}>
