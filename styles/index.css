@@ -16,3 +16,29 @@
 	@apply items-center;
 	@apply justify-center;
 }
+
+/* Global CSS for the editor */
+
+.ql {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.ql-toolbar {
+	margin: 1px 1px;
+	background: #F8F8F8 !important;
+	border: none !important;
+}
+.ql-active {
+	background: #cbd5e0 !important;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+	border: none;
+}
+span.ql-formats > button {
+	border-radius: 4px !important;
+	margin-right: 2px;
+}
+span.ql-formats > button:hover {
+	background: #DDDDDD;
+	color: #edf2f7 !important;	
+}
