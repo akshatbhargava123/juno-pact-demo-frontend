@@ -1,4 +1,13 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+## Initial version of Arbitration and Mediation Dashboards for demo purposes
+
+- [Arbitration Demo](https://juno-pact-frontend.akshatbhargava123.now.sh/arbitrator-dashboard/mails)
+- [Mediation Demo](https://juno-pact-frontend.akshatbhargava123.now.sh/dashboard/channel_id)
+
+## Tech Stack
+- TailwindCSS
+- NextJS / React
+- Hasura (GraphQL client)
+
 
 ## Getting Started
 
